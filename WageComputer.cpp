@@ -81,6 +81,9 @@ int main()
                 validenumberofdependents = true;
         } while (!(validenumberofdependents));
 
+        cout << endl << endl << endl << endl << endl << "Processing... ";
+        cout << endl << endl << endl;
+
         //  does the employee have OT
         if (hoursworked > 40) {
             overtimehours = hoursworked - 40;
@@ -113,29 +116,29 @@ int main()
         //------------------------------------------------------------------------
         //  print the pay stub
 
-        cout << endl << endl << endl << endl << "-----------------------------------------------------" << endl;
-        cout << "JNC Credit and Financing" << endl << endl;
-        cout << "Pay Stub" << endl;
-        cout << "-----------------------------------------------------" << endl;
+        cout << endl << endl << endl << endl << "\t" << "\t" << "-----------------------------------------------------" << endl;
+        cout << "\t\t" << "   JNC Credit and Financing" << endl << endl;
+        cout << "\t\t" << "   Pay Stub" << endl;
+        cout << "\t\t" << "-----------------------------------------------------" << endl;
         cout << setprecision(2);
-        cout << "\t" << "Regular Hours worked: " << fixed << regularhoursworked << endl;
-        cout << "\t" << "Overtime Hours worked: " << fixed << overtimehours << endl;
-        cout << "\t" << "Gross Pay: " << endl;
-        cout << "\t\t" << "Regular Pay: " << fixed << regularpay << endl;
-        cout << "\t\t" << "Overtime Pay: " << fixed << overtimepay << endl;
+        cout << "\t\t\t" << "Regular Hours worked: " << fixed << regularhoursworked << endl;
+        cout << "\t\t\t" << "Overtime Hours worked: " << fixed << overtimehours << endl;
+        cout << "\t\t\t" << "Gross Pay: " << endl;
+        cout << "\t\t\t\t" << "Regular Pay: " << fixed << regularpay << endl;
+        cout << "\t\t\t\t" << "Overtime Pay: " << fixed << overtimepay << endl;
 
-        cout << "\t" << "Deductions: " << endl;
-        cout << "\t\t" << "Federal Income Tax: " << fixed << federalincometax << endl;
-        cout << "\t\t" << "State Income Tax: " << fixed << stateincometax << endl;
-        cout << "\t\t" << "Social Security Tax: " << fixed << socialsecuritytax << endl;
+        cout << "\t\t\t" << "Deductions: " << endl;
+        cout << "\t\t\t\t" << "Federal Income Tax: " << fixed << federalincometax << endl;
+        cout << "\t\t\t\t" << "State Income Tax: " << fixed << stateincometax << endl;
+        cout << "\t\t\t\t" << "Social Security Tax: " << fixed << socialsecuritytax << endl;
         if (additionalhealthcoveragecost > 0) 
-            cout << "\t\t" << "Additional health coverage cost: " << fixed << additionalhealthcoveragecost << endl;
-        cout << "\t" << "Net Pay: " << netpay << endl;
-        cout << "-----------------------------------------------------" << endl;
+            cout << "\t\t\t\t" << "Additional health coverage cost: " << fixed << additionalhealthcoveragecost << endl;
+        cout << "\t\t\t" << "Net Pay: " << netpay << endl;
+        cout << "\t\t" << "-----------------------------------------------------" << endl;
 
         //  ask if user wants to run app again
         do {
-            cout << endl << "Run the payroll program again [y/n]? ";
+            cout << endl << "\t\t\t" << "Run the payroll program again [y/n]? ";
             cin >> again;
         } while (!(again == 'y' || again == 'Y' || again == 'n' || again == 'N'));
 
